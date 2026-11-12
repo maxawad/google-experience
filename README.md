@@ -1,6 +1,36 @@
-# Hexo + Netlify CMS Starter
+# Google Experience (Hexo + Netlify CMS multilingual blog)
 
-## Intro
+## What it is
+This repository is a small multilingual blog website. It is built with the Hexo static site generator and the Material theme, and it has a browser-based editor (Netlify CMS) so posts can be written without touching code. The sample posts are in English, Spanish and Chinese.
+
+It is a fork of the "Hexo + Netlify CMS Starter" by lunaceee, which is based on the Hexo Material theme by Viosey. The repository name suggests it was used as a base for a personal experiment, but the content is still the starter's sample content.
+
+## What it does
+- Generates a static blog from Markdown posts in `source/_posts`.
+- Supports several languages, with language based redirects (`source/_redirects`) when hosted on Netlify.
+- Includes a content editor at `/admin` (Netlify CMS with Git Gateway). Logging in to it only works on a Netlify site that has Identity and Git Gateway enabled.
+
+## Tech stack
+Hexo 3.7, Node.js, EJS and Stylus renderers, the Material theme (git submodule), Netlify CMS, Markdown.
+
+## Status
+Working as a sample site (starter content, theme from a submodule). It needs no API keys to build or view. The `/admin` editor needs a Netlify site to log in. The dependencies are from 2018, so use an older Node.js version (for example Node 10 or 12) if a build fails on a recent one.
+
+## Try it
+The site builds to plain static files, with no secrets needed:
+
+```
+git clone --recursive https://github.com/maxawad/google-experience.git
+cd google-experience
+npm install
+npm run generate
+```
+
+Serve the `public/` folder with any static file host. To preview locally with live reload, run `npm start` and open http://localhost:4000.
+
+If you cloned without `--recursive`, fetch the theme with `git submodule update --init`.
+
+## Original starter notes (Intro)
 This is an example site built with [Hexo](https://hexo.io/) and [Netlify CMS](https://github.com/netlify/netlify-cms), based on [Viosey's](https://github.com/viosey) [Hexo material theme](https://github.com/viosey/hexo-theme-material).
 
 [Live demo](https://hexo-material-cms.netlify.com)
